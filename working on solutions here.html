@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Page Title</title>
+</head>
+
+<body>
+  <p>hi</p>
+  <script>
+    // Your JavaScript goes here!
+    console.log("Hello, World!")
+
+    let testing = [1, 2, 3, 4];
+    console.log(testing);
+    console.log("---");
+
+    const removeFromArray = function (inputArray, condition) {
+      console.log(inputArray, condition);
+      for(let i in inputArray){
+        if(inputArray[i]==condition){
+          inputArray.splice(i,1);
+        }
+      }
+      console.log("arris: ",inputArray);
+    };
+
+
+
+    removeFromArray(testing, 3);
+
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>
