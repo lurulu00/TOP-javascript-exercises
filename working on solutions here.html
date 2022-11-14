@@ -10,47 +10,33 @@
   <p>hi</p>
   <script>
     // Your JavaScript goes here!
+
+    /*
+    Think about how you would do this on pen and paper and then how you might translate that process into code:
+    - make sure you pay attention to the function parameters
+    - create a variable to hold the final sum
+    - loop through the given numbers ([link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration))
+    - on each iteration add the number to the sum
+    - return the sum after finishing the loop
+    */
+
     console.log("Hello, World!")
 
-    let testing = [1, 2, 3, 4];
-    let spec = [3, 2];
-
-    console.log(testing);
-    console.log("---");
-
-    // const removeFromArray = function (...args) {
-    //   const newArray = [];
-    //   const inputArray=args[0];
-    //   console.log(inputArray, args, newArray);
-    //   inputArray.forEach((item) => {
-    //     console.log(item);
-    //     if (!args.includes(item)) {
-    //       newArray.push(item);
-    //     }
-    //   });
-    //   return newArray;
-    // };
-
-    const removeFromArray = function (...args) {
-      const array = args[0];
-      const newArray = [];
-      array.forEach((item) => {
-        if (!args.includes(item)) {
-          newArray.push(item);
-        }
-      });
-      return newArray;
+    const sumAll = function (start,end) {
+      let sum=0;
+      if (start > end){
+        let temp = start;
+        start = end;
+        end = temp;
+      }
+      console.log (start,end);
+      for (start; start <= end; start++){
+        sum+=start;
+      }
+      return sum;
     };
 
-
-
-    console.log(removeFromArray(testing, spec));
-    console.log("result");
-
-
-
-
-
+    console.log(sumAll(4,1));
 
 
   </script>
