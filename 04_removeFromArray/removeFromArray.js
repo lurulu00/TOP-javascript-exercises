@@ -1,10 +1,14 @@
-const removeFromArray = function (inputArray, condition) {
-    for (let i in inputArray) {
-        if (inputArray[i] == condition) {
-            inputArray.splice(i, 1);
+const removeFromArray = function (...args) {
+    const array = args[0];
+      const newArray = [];
+      array.forEach((item) => {
+        if (!args.includes(item)) {
+          newArray.push(item);
         }
-    }
-    return inputArray;
+      });
+      return newArray;
+
+
 };
 
 // Do not edit below this line

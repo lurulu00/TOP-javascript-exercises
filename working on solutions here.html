@@ -13,23 +13,39 @@
     console.log("Hello, World!")
 
     let testing = [1, 2, 3, 4];
+    let spec = [3, 2];
+
     console.log(testing);
     console.log("---");
 
-    const removeFromArray = function (inputArray, condition) {
-      console.log(inputArray, condition);
-      for(let i in inputArray){
-        if(inputArray[i]==condition){
-          inputArray.splice(i,1);
+    // const removeFromArray = function (...args) {
+    //   const newArray = [];
+    //   const inputArray=args[0];
+    //   console.log(inputArray, args, newArray);
+    //   inputArray.forEach((item) => {
+    //     console.log(item);
+    //     if (!args.includes(item)) {
+    //       newArray.push(item);
+    //     }
+    //   });
+    //   return newArray;
+    // };
+
+    const removeFromArray = function (...args) {
+      const array = args[0];
+      const newArray = [];
+      array.forEach((item) => {
+        if (!args.includes(item)) {
+          newArray.push(item);
         }
-      }
-      console.log("arris: ",inputArray);
+      });
+      return newArray;
     };
 
 
 
-    removeFromArray(testing, 3);
-
+    console.log(removeFromArray(testing, spec));
+    console.log("result");
 
 
 
