@@ -21,23 +21,16 @@
     */
 
     console.log("Hello, World!")
-
-    const sumAll = function (start,end) {
-      let sum=0;
-      if (start > end){
-        let temp = start;
-        start = end;
-        end = temp;
-      }
-      console.log (start,end);
-      for (start; start <= end; start++){
-        sum+=start;
-      }
-      return sum;
-    };
-
-    console.log(sumAll(4,1));
-
+    const leapYears = function(year) {
+    if ((year % 4 !==0) || (year%100 ===0 && year %400 !==0)){
+        return false;
+    }
+    return true;
+};
+    
+    console.log ("1996 is ", leapYears(1996));
+    // console.log (leapYears(4));
+    // console.log (leapYears(100));
 
   </script>
 </body>
