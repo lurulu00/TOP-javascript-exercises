@@ -10,29 +10,18 @@
   <p>hi</p>
   <script>
     // Your JavaScript goes here!
-
-    /*
-    Think about how you would do this on pen and paper and then how you might translate that process into code:
-    - make sure you pay attention to the function parameters
-    - create a variable to hold the final sum
-    - loop through the given numbers ([link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration))
-    - on each iteration add the number to the sum
-    - return the sum after finishing the loop
-    */
-
-    console.log("Hello, World!");
-    const ftoc = function (temperature) {
-      return Math.round(((temperature - 32) * 5 / 9) * 10) / 10;
-
+    const sum = function (...args) {
+      const array = args;
+      console.log(array);
+      let sumOf = 0;
+      array.forEach((num) => {
+        sumOf += num;
+        console.log(sumOf, num);
+      });
+      return sumOf;
     };
-
-    const ctof = function (temperature) {
-      return Math.round(temperature * 9 / 5 * 10) / 10 + 32;
-    };
-
-    console.log(ctof(73.2));
-
-
+    // console.log(sum(1,2,3));
+    console.log(sum(1,2,3))
   </script>
 </body>
 
